@@ -80,6 +80,7 @@ int main(){
 
             printf("\n");
             
+            //Carta 2
             printf("Os dados da Carta 2 sao: \n");
             printf("Estado: %s\n", estado2); 
             printf("Codigo da carta: %s\n", codigo2);
