@@ -6,10 +6,11 @@ int main () {
       int casas = 0;
       int bispo = 5;
       int torre = 5;
+      int cavalo = 3;
       int x = 0;
       int y = 0;
 
-      printf("Movimento x significa horizontal e o movimento y significa vertical\n");
+      printf("Movimento (x) significa horizontal e o movimento (Y) significa vertical\n");
       printf("Torre comeca na posicao %d\n", x);
 
       while (casas < torre) {
@@ -53,7 +54,19 @@ int main () {
 
     printf("A rainha terminou na posicao %d\n", x);
 
-    return 0;
+    //Movimento da peca cavalo
+
+    for (casas = 0; y < 3; x < 0) {
+        while (casas < cavalo)
+        {
+            casas++;
+            y++;
+        }
+        x++;
+
+       printf("O cavalo andou %d casas para baixo e %d casas para a esquerda\n", y, x);
+       
+    }
       
 
       
