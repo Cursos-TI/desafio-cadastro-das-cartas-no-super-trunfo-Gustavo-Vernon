@@ -1,5 +1,44 @@
 #include <stdio.h>
-#include <string.h>
+
+//mright = MOVIMENTO DIREITA
+void mright (int direita) {
+      if (direita > 0) {
+            mright(direita - 1);
+            printf("%d casas para direita\n", direita);
+            
+            
+      }
+}
+//mup = MOVIMENTO ESQUERDA
+void mleft (int esquerda) {
+      if (esquerda > 0) {
+            mleft(esquerda - 1);
+            printf("%d casas para esquerda \n", esquerda);
+            
+            
+      }
+}
+
+//mup = MOVIMENTO CIMA
+void mup (int cima) {
+      if (cima > 0) {
+            mup(cima - 1);
+            printf("%d casas para cima \n", cima);
+            
+            
+      }
+}
+
+//mup = MOVIMENTO BAIXO
+void mdown (int baixo) {
+      if (baixo > 0) {
+            mdown(baixo - 1);
+            printf("%d casas para baixo \n", baixo);
+            
+            
+      }
+}
+
 int main () {
 
       int rainha = 8 ;
@@ -9,25 +48,54 @@ int main () {
       int cavalo = 3;
       int x = 0;
       int y = 0;
+      
+// Movimentos da peca do bispo usando recursividade
 
-      printf("Movimento (x) significa horizontal e o movimento (Y) significa vertical\n");
-      printf("Torre comeca na posicao %d\n", x);
+      printf("casas que o bispo andou\n");
+      mright (bispo);
+      mup (bispo);
+  
+      printf("\n");
 
-      while (casas < torre) {
-            x++;
-            casas++;
-            printf("A torre andou %d casas para a direita\n", x);
-      }
+
+
+// Movimentos da peca da torre
+
+      printf("casas que a torre andou\n");
+      mright(torre);
 
       printf("\n");
-     
-      // Movimentacao da peca bispo;
-      // Primeiro determinando novamente os valores das casas e direcoes
+
+// Movimentos da peca da rainha
+
+      printf("casas que a rainha andou\n");
+      mright(rainha);
+
+      printf("\n");
+
+//Movimento da peca do cavalo
+
+
+for (casas = 0; y < 3; x < 0) {
+        while (casas < cavalo)
+        {
+            casas++;
+            y++;
+        }
+        x++;
+      }
+
+       printf("O cavalo andou %d casas para baixo e %d casas para a esquerda\n", y, x);
+
+       printf("\n");
+
+//Movimento da peca bispo usando estruturas de loop
+
       casas = 0;
       x = 0;
+      y = 0;casas = 0;
+      x = 0;
       y = 0;
-
-      printf("A peca agora eh o bispo comecando na posicao %d em x e %d em y \n", x, y);
       do
       {
             x++;
@@ -36,49 +104,19 @@ int main () {
             printf("O bispo andou %d casas para cima e %d para a direita\n", y, x);
       }
        while (casas < bispo); 
-       printf("O bispo terminou na posicao %d y e %d x \n", y, x);
 
        printf("\n");
 
-       //Movimentacao da rainha sendo feito o inverso
-       //Comeca da ultima posicao (8) e retorna para o 0
-      
-       x = 8;
-       printf("A rainha comeca na posicao %d\n", rainha);
+
+
+
+
        
 
-    for (casas = 0; x > 0; casas++) {
-        x--; 
-        printf("A rainha andou para a esquerda, posição atual: %d\n", x);
-    }
 
-    printf("A rainha terminou na posicao %d\n", x);
 
-    //Movimento da peca cavalo
 
-    for (casas = 0; y < 3; x < 0) {
-        while (casas < cavalo)
-        {
-            casas++;
-            y++;
-        }
-        x++;
 
-       printf("O cavalo andou %d casas para baixo e %d casas para a esquerda\n", y, x);
-       
-    }
-      
 
-      
-      
-      
-
-      
-      
-      
-      
-      
-      
-      
-      return 0;
+return 0;
 }
